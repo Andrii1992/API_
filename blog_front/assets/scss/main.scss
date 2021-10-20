@@ -1,0 +1,157 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+$green: #38c172;
+$black: #212529;
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+.page-enter-active,
+.page-leave-active
+.layout-enter-active, 
+.layout-leave-active {
+  transition: filter .3s ease;
+}
+.page-enter,
+.page-leave-active,
+.layout-enter, 
+.layout-leave-active {
+   filter: blur(50px);
+   transition: filter 0.3s ease;
+}
+
+#app{
+  max-width: 2000px;
+  display: block;
+  margin: 0 auto !important;
+  //transition-duration:4s;
+}
+
+@keyframes animBlock {
+  0% {
+    filter: grayscale(10%);
+  }
+  100% {
+    filter: grayscale(0.5) blur(10px);
+  }
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  overflow: hidden;
+  min-height: 100vh;
+  display: grid;
+
+  grid-template-rows: auto 1fr auto;
+}
+
+#nav,
+#navf {
+  padding: 30px;
+  background-color: $black;
+}
+
+#nav a {
+  font-weight: bold;
+  color: white;
+}
+
+.posts .btn-outline-success:hover{
+  color: white;
+  text-decoration: none;
+
+}
+
+.nuxt-link-exact-active.nuxt-link-active {
+  color: $green !important;
+
+}
+/* post */
+
+.post .card-img,
+.post .card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.post .card {
+  border: 0;
+  border-radius: 0;
+}
+
+.post .card-img,
+.post .card-img-bottom {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.post .card-img-overlay {
+    top: auto !important;
+    background-color: rgba(0,0,0,0.5);
+}
+.post .card-img-overlay h4{
+  font-size: 60px;
+  color: $green;
+}
+
+.post h2{
+  font-size: 40px;
+}
+
+
+.post p {
+    text-align: justify;    
+}
+
+
+
+@media(max-width:767px) {
+  .post .card-img-overlay h4 {
+    font-size: 7vw;
+  }
+  .post h2{
+    font-size: 6vw;
+  }
+  .post p {
+    font-size: 5vw;
+  }
+}
+
+/* posty */
+
+.posts .page-item.active .page-link {
+  background-color: #212529 !important;
+  border-color: #212529 !important;
+}
+
+.posts .page-link {
+  color: #212529 !important;
+}
+
+.posts .active .page-link{
+  color: white !important;
+}
+
+.posts .btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+  border: 2px #28a745 solid;
+  border-radius: 5px;
+  padding: 5px;
+}
